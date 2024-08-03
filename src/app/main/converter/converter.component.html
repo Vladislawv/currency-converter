@@ -1,0 +1,21 @@
+<div class="converter">
+  <div class="input-group">
+    <input [(ngModel)]="amount1" (ngModelChange)="convert()" type="number" min="0" placeholder="Enter amount">
+    <select [(ngModel)]="currency1" (ngModelChange)="convert()">
+      <option value="UAH">UAH</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <input [(ngModel)]="amount2" (ngModelChange)="convertReverse()" type="number" min="0" placeholder="Enter amount">
+    <select [(ngModel)]="currency2" (ngModelChange)="convert()">
+      <option value="UAH">UAH</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+  </div>
+
+  <button class="swap-button" (click)="swapCurrencies()">Swap Currencies</button>
+</div>
